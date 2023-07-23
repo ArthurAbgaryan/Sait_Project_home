@@ -179,3 +179,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Установки crispy-forms
 CRISPY_TEMPLATE_PACK = 'uni_form'
+def save():
+    pass
