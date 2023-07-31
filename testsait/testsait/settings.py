@@ -63,12 +63,13 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.google',
-    "debug_toolbar",
+    #"debug_toolbar",
     #'channels',
     'crispy_forms',
     'ckeditor',
-    'django_extensions',
-    'django_cleanup.apps.CleanupConfig'
+    'django_cleanup.apps.CleanupConfig',
+    #'django_extensions',
+    'blog',
 ]
 
 SITE_ID = 1
@@ -80,7 +81,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    #"debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -235,14 +236,7 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASS')
 
 # End Email
 
-#теги определяющие цвета выводимых сообшений урок 25
-MESSAGE_TAGS = {
-        messages.DEBUG: 'alert-secondary',
-        messages.INFO: 'alert-info',
-        messages.SUCCESS: 'alert-success',
-        messages.WARNING: 'alert-warning',
-        messages.ERROR: 'alert-danger',
-}
+
 
 # в производстве убрать.
 os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
